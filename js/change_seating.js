@@ -33,7 +33,9 @@ function change_seating() {
     return seats;
 }
 
-// main
-(function () {
-    console.log(change_seating());
-})();
+function main() {
+    var seats_list = change_seating();
+    for (var i = 0; i < 20; i++) {
+        document.getElementById("seat" + i).innerHTML = seats_list[i];
+    }
+};
